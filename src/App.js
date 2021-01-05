@@ -9,9 +9,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <p>
-          Learning GitHub Workflows and Actions. Deployed with CI/CD
-        </p>
+        <p>Learning GitHub Workflows and Actions. Deployed with CI/CD</p>
         <a
           className="App-link"
           href="https://reactjs.org"
