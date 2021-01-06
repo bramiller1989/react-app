@@ -1,5 +1,11 @@
 #!/bin/sh -l
 
+if [true]
+then
+    echo 'error'
+    exit 1
+fi
+
 echo "::debug ::Debug message from Docker"
 echo "::warning ::Warning message from Docker"
 echo "::error ::Error message from Docker"
