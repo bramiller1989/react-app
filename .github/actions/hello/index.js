@@ -4,9 +4,9 @@ const github = require("@actions/github");
 try {
   // throw new Error("some error message");
 
-  core.debug("Debug message");
-  core.warning("Waring message");
-  core.error("Error message");
+  core.debug("Debug message from JavaScript");
+  core.warning("Waring message from JavaScript");
+  core.error("Error message from JavaScript");
 
   const name = core.getInput("who-to-greet");
   core.setSecret(name);
