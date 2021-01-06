@@ -13,3 +13,4 @@ jobs:
           who-to-greet: Developer
       - run: |
           echo "Time: ${{ steps.hello.outputs.time }}"
+          echo $HELLO
