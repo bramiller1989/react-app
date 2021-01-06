@@ -5,11 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: pwd
-      - run: ls -a
       - uses: ./.github/actions/hello
         id: hello
         with:
-          who-to-greet: World
+          who-to-greet: Developer
       - run: |
           echo "Time: ${{ steps.hello.outputs.time }}"
