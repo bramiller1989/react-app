@@ -8,11 +8,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Send a Slack Message
-        uses: bramiller1989/open-issue@v1
+        uses: ./.github/actions/slack
         with:
           slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
           message: Testing - Hello Slack from custom GitHub Action running in a Docker container
-      - uses: ./.github/actions/issue
+      - uses: bramiller1989/open-issue@v1
         id: issue
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
