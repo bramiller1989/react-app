@@ -11,7 +11,7 @@ jobs:
         uses: ./.github/actions/slack
         with:
           slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
-          message: Hello Slack
+          message: Testing - Hello Slack from custom GitHub Action running in a Docker container
       - uses: ./.github/actions/issue
         id: issue
         with:
