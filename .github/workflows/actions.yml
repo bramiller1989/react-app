@@ -1,0 +1,32 @@
+name: Test Actions
+
+on: push
+
+jobs:
+  testing-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Send a Slack Message
+        uses: ./.github/actions/slack
+        with:
+          slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
+          message: Testing - Hello Slack from custom GitHub Action running in a Docker container
+      - uses: bramiller1989/open-issue@v1
+        id: issue
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: Title
+          body: Body
+          assignees: |
+            bramiller1989
+            bramiller
+      - run: |
+          echo ${{ steps.issue.outputs.issue }}
+      - uses: ./.github/actions/hello-docker
+        id: hello
+        with:
+          who-to-greet: Developer
+      - run: |
+          echo "Time: ${{ steps.hello.outputs.time }}"
+          echo $HELLO
