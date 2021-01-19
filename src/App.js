@@ -11,6 +11,7 @@ function App() {
         </p>
         <p>Learning GitHub Workflows and Actions. Deployed with CI/CD</p>
         <p>This is awesome</p>
+        <p>This is another awesome</p>
         <a
           className="App-link"
           href="https://reactjs.org"
