@@ -58,5 +58,15 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "commitlint": {
+    "rules": {
+      "references-empty": [2, "never"],
+    },
+    "parserPreset": {
+      "parserOpts": {
+        "issuePrefixes": ["PROJ-"]
+      }
+    }
   }
 }
