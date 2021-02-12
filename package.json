@@ -25,7 +25,8 @@
   "husky": {
     "hooks": {
       "prepare-commit-msg": "jira-prepare-commit-msg",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "validate-branch-name"
     }
   },
   "eslintConfig": {
@@ -54,7 +55,8 @@
     "husky": "^4.3.8",
     "jira-prepare-commit-msg": "^1.5.2",
     "prettier": "2.2.1",
-    "semantic-release": "^17.3.1"
+    "semantic-release": "^17.3.1",
+    "validate-branch-name": "^1.0.6"
   },
   "config": {
     "commitizen": {
@@ -64,7 +66,11 @@
   "jira-prepare-commit-msg": {
     "messagePattern": "$J $M",
     "jiraTicketPattern": "([A-B]+#\\d+)",
-    "isConventionalCommit": false,
+    "isConventionalCommit": true,
     "allowEmptyCommitMessage": false
+  },
+  "validate-branch-name": {
+    "pattern": "^(master|develop){1}$|^(feature|fix|hotfix|release)/.+$",
+    "errorMsg": "your own error message"
   }
 }
