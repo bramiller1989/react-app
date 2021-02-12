@@ -1,6 +1,6 @@
 {
     "jira-prepare-commit-msg": {
-      "messagePattern": "[$J]\n$M",
+      "messagePattern": "[$J] $M",
       "jiraTicketPattern": "([A-Z]+-\\d+)",
       "commentChar": "#",
       "isConventionalCommit": true,
