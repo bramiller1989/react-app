@@ -24,9 +24,9 @@
   },
   "husky": {
     "hooks": {
-      "prepare-commit-msg": "jira-prepare-commit-msg",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "validate-branch-name"
+      "prepare-commit-msg": "npx jira-prepare-commit-msg",
+      "commit-msg": "npx commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "npx validate-branch-name"
     }
   },
   "eslintConfig": {
